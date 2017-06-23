@@ -60,7 +60,7 @@
         menu_items = result.data.menu_items;
         for(i = 0; i < menu_items.length; i++) {
           if(searchTerm === '') break;
-          if(menu_items[i].name.toLowerCase().indexOf(searchTerm) !== -1) {
+          if(menu_items[i].description.toLowerCase().indexOf(searchTerm) !== -1) {
             foundItems.push(menu_items[i]);
           }
         }
