@@ -19,7 +19,7 @@
     .state('categories', {
       url: '/categories',
       templateUrl: 'src/menuapp/templates/main-categories.template.html',
-      controller: 'CategoriesController as cat',
+      controller: 'CategoriesController as vm',
       resolve: {
         categories: ['MenuDataService', function (MenuDataService) {
           return MenuDataService.getAllCategories();
@@ -29,7 +29,7 @@
     .state('items', {
       url: '/items/{categoryName}',
       templateUrl: 'src/menuapp/templates/main-category-detail.template.html',
-      controller: "CategoryDetailController as categoryDetail",
+      controller: "CategoryDetailController as vm",
       resolve: {
         items: ['$stateParams','MenuDataService',
                function ($stateParams,MenuDataService) {

@@ -6,7 +6,7 @@
   CategoryDetailController.$inject = ['$stateParams', 'items'];
 
   function CategoryDetailController($stateParams, items) {
-      var categoryDetail = this;
-      categoryDetail.items = items;
+      var vm = this;
+      vm.items = items;
   }
 })();
