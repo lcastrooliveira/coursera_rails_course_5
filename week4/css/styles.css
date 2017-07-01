@@ -1,0 +1,6 @@
+p[ui-sref] {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: blue;
+}
