@@ -25,6 +25,17 @@
           return MenuDataService.getAllCategories();
         }]
       }
+    })
+    .state('items', {
+      url: '/items/{categoryName}',
+      templateUrl: 'src/menuapp/templates/main-category-detail.template.html',
+      controller: "CategoryDetailController as categoryDetail",
+      resolve: {
+        items: ['$stateParams','MenuDataService',
+               function ($stateParams,MenuDataService) {
+                 return MenuDataService.getItemsForCategory($stateParams.categoryName);
+               }]
+      }
     });
   }
 })();
