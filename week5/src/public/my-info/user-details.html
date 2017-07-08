@@ -1,0 +1,15 @@
+<h1>Your Profile</h1>
+<p>First Name: <strong>{{$ctrl.userData.firstName}}</strong></p>
+<p>Last Name: <strong>{{$ctrl.userData.lastName}}</strong></p>
+<p>E-mail: <strong>{{$ctrl.userData.email}}</strong></p>
+<p>Phone: <strong>{{$ctrl.userData.phone}}</strong></p>
+<p>Favorite Menu Item: <strong>{{$ctrl.userData.menuData.name}}</strong></p>
+<p>Description:</p>
+<p>
+  <strong>{{$ctrl.userData.menuData.description}}</strong>
+</p>
+<div>
+  <img class="img-responsive" width="250" height="150"
+  ng-src="{{$ctrl.basePath}}/images/{{$ctrl.userData.menuData.short_name}}.jpg"
+  alt="{{$ctrl.userData.menuData.name}}">
+</div>

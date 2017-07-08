@@ -1,0 +1,8 @@
+<div class="container">
+  <div ng-if="myInfoCtrl.unregistered">
+    Not Signed Up Yet. <a ui-sref="public.sign-up">Sign up Now!</a>
+  </div>
+  <div ng-if="!myInfoCtrl.unregistered">
+    <user-details user-data="myInfoCtrl.userInfo"></user-details>
+  </div>
+</div>
